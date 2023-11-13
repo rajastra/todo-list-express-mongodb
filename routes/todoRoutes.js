@@ -9,7 +9,8 @@ router.use(authController.protect);
 router
   .route('/')
   .get(todoController.getAllTodos)
-  .post(todoController.createTodo);
+  .post(todoController.createTodo)
+  .delete(todoController.deleteAllTodos);
 
 router
   .route('/:id')
