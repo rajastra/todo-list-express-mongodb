@@ -230,9 +230,7 @@ DELETE /api/v1/todos/:id
 
 ##### Response delete todo by id
 
-```json
 status 204 no content
-```
 
 #### Delete all todo
 
@@ -244,6 +242,4 @@ DELETE /api/v1/todos
 
 ##### Response delete all todo
 
-```json
 status 204 no content
-```
