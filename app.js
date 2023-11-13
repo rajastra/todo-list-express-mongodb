@@ -6,6 +6,7 @@ const mongoSanitze = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 
 const userRouter = require('./routes/userRoutes');
+const todoRouter = require('./routes/todoRoutes');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errController');
 
@@ -43,6 +44,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/todos', todoRouter);
 
 app.use('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
